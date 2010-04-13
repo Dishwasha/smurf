@@ -20,3 +20,20 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+# Jewel me
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "smurf"
+    gem.summary = "Rails plugin to automatically minify JS and CSS when their bundles get cached"
+    gem.description = ""
+    gem.email = "gus@thumblemonks.com"
+    gem.homepage = "http://github.com/thumblemonks/smurf"
+    gem.authors = ["Justin 'Gus' Knowlden"]
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+end
