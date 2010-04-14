@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smurf}
-  s.version = "1.0.4.rails3.beta1"
+  s.version = "1.0.4.rails3.beta2"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin 'Gus' Knowlden"]
@@ -21,11 +21,14 @@ Gem::Specification.new do |s|
      "MIT-LICENSE",
      "README.markdown",
      "Rakefile",
+     "VERSION",
      "lib/smurf.rb",
      "lib/smurf/javascript.rb",
      "lib/smurf/stylesheet.rb",
      "rails/init.rb",
      "smurf.gemspec",
+     "test/integration_test.rb",
+     "test/javascript_test.rb",
      "test/rails/app/controllers/application.rb",
      "test/rails/config/application.rb",
      "test/rails/config/boot.rb",
@@ -37,7 +40,7 @@ Gem::Specification.new do |s|
      "test/rails/public/stylesheets/bar.css",
      "test/rails/public/stylesheets/cache/expected.css",
      "test/rails/public/stylesheets/foo.css",
-     "test/smurf_test.rb",
+     "test/stylesheet_test.rb",
      "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/thumblemonks/smurf}
@@ -46,13 +49,15 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Rails plugin to automatically minify JS and CSS when their bundles get cached}
   s.test_files = [
-    "test/rails/app/controllers/application.rb",
+    "test/integration_test.rb",
+     "test/javascript_test.rb",
+     "test/rails/app/controllers/application.rb",
      "test/rails/config/application.rb",
      "test/rails/config/boot.rb",
      "test/rails/config/environment.rb",
      "test/rails/config/environments/test.rb",
      "test/rails/config/routes.rb",
-     "test/smurf_test.rb",
+     "test/stylesheet_test.rb",
      "test/test_helper.rb"
   ]
 
